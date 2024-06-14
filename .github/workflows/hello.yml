@@ -1,0 +1,12 @@
+# pushに対してトリガー
+# Hello, Worldを出力する
+name:  Hello
+# MEMO: 複数イベントにトリガーする場合は、配列の形式で書ける([push, pull_request])
+on: push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest # Jobの実行環境
+    steps:
+      - run: echo Hello, world!
+      - uses: actions/checkout@v4
