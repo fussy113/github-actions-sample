@@ -1,0 +1,25 @@
+name: Data share using GITHUB_OUTPUT
+
+on: push
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - id: source
+        run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
+      - env:
+          RESULT: ${{ steps.source.outputs.result }}
+        run: echo "${RESULT}"
+
+# 同様に値をSTEP間で共有する
+# name: Data share using GITHUB_ENV
+#
+# on: push
+#
+# jobs:
+#   share:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "result=Hello" >> "${GITHUB_ENV}"
+#       - run: echo "${RESULT}"
