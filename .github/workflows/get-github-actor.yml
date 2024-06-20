@@ -1,0 +1,9 @@
+name: get GitHub Actor from contexts
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.actor }}"
