@@ -33,3 +33,13 @@
 ::warning::<warning-message>
 ::notice::<notice-message>
 ```
+
+## ジョブサマリー
+
+マークダウン形式で出力できる
+
+`GITHUB_STEP_SUMMARY` 環境変数に値を入れることで、表示される
+
+```yml
+echo "# MD形式の文章" >> "${GITHUB_STEP_SUMMARY}"
+```
