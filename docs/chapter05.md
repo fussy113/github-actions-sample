@@ -19,3 +19,17 @@
 # echoとか使ってログを出力する
 ::endgroup::
 ```
+
+- ログを手動でマスクできる
+
+```yml
+::add-mask::<secret-value>
+```
+
+## アノテーション
+
+```yml
+::error::<error-message>
+::warning::<warning-message>
+::notice::<notice-message>
+```
